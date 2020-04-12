@@ -2,6 +2,9 @@
   "name": "merng",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.11.0",
