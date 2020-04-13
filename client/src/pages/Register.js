@@ -19,13 +19,13 @@ function Register(props) {
   }
 
   const [registerUser, { loading }] = useMutation(REGISTER_USER, {
-    update(proxy, { data: { regisetr: userData }}){
+    update(proxy, { data: { register: userData }}){
       // console.log(result);
       context.login(userData)
       props.history.push('/');
     },
     onError(err){
-      console.log(err.graphQLErrors[0].extensions.exception.errors);
+      // console.log(err.graphQLErrors[0].extensions.exception.errors);
       setErrors(err.graphQLErrors[0].extensions.exception.errors)
     },
     variables: values
